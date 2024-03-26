@@ -1,0 +1,81 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Vintage Book",
+      "author": "Alice Smith",
+      "image": "https://i.ibb.co/QNYHv13/1159-removebg-preview.png",
+      "review": "Set in the tumultuous era of World War II, 'The Vintage Book' takes readers on a mesmerizing journey through love, loss, and resilience. With evocative prose and richly drawn characters, Alice Smith paints a vivid portrait of life during wartime. From the bustling streets of London to the serene countryside, this novel captures the essence of human strength in the face of adversity. A poignant tale that will linger in your heart long after you turn the final page.",
+      "totalPages": 320,
+      "rating": 4.5,
+      "category": "Historical Fiction",
+      "tags": ["Romance", "War"],
+      "publisher": "Vintage Press",
+      "yearOfPublishing": 2018
+    },
+    {
+      "bookId": 2,
+      "bookName": "WIN-WIN Strategy",
+      "author": "David Johnson",
+      "image": "https://i.ibb.co/qWRdx6W/7492664-removebg-preview.png",
+      "review": "In 'WIN-WIN Strategy,' David Johnson presents a masterful guide to achieving success in negotiations. Drawing on years of experience in the business world, Johnson offers practical strategies and insightful tactics for navigating complex deal-making scenarios. Whether you're a seasoned executive or a budding entrepreneur, this book is an indispensable resource for honing your negotiation skills and maximizing outcomes. Engaging, informative, and empowering, 'WIN-WIN Strategy' is a must-read for anyone seeking to excel in the art of negotiation.",
+      "totalPages": 240,
+      "rating": 4.8,
+      "category": "Business",
+      "tags": ["Negotiation", "Strategy"],
+      "publisher": "HarperCollins",
+      "yearOfPublishing": 2020
+    },
+    {
+      "bookId": 3,
+      "bookName": "The Scholarship Monthly Planner",
+      "author": "Emily Brown",
+      "image": "https://i.ibb.co/JvbgB1H/kindpng-4022054-1-1.png",
+      "review": "Designed to help students navigate the complexities of academic life, 'The Scholarship Monthly Planner' is an indispensable tool for success. With its user-friendly layout and comprehensive approach, this planner empowers students to stay organized, set goals, and track progress throughout the academic year. Packed with valuable tips, resources, and motivational quotes, it's more than just a planner—it's a roadmap to achieving academic excellence. Whether you're a high school student preparing for college or a graduate student juggling multiple commitments, this planner will guide you every step of the way.",
+      "totalPages": 150,
+      "rating": 4.3,
+      "category": "Education",
+      "tags": ["Study", "Planning"],
+      "publisher": "Academic Press",
+      "yearOfPublishing": 2019
+    },
+    {
+      "bookId": 4,
+      "bookName": "The Space Between Us",
+      "author": "Sarah Johnson",
+      "image": "https://i.ibb.co/9qBSx9Z/the-space-between-us-removebg-preview.png",
+      "review": "In 'The Space Between Us,' Sarah Johnson delves deep into the complexities of human connection in an increasingly digital world. Through the intertwining stories of diverse characters, she explores themes of loneliness, isolation, and the search for meaningful connections. With lyrical prose and poignant insights, Johnson crafts a narrative that resonates on a profound emotional level. A timely and thought-provoking novel that prompts readers to reflect on the true nature of relationships in the modern age.",
+      "totalPages": 280,
+      "rating": 4.6,
+      "category": "Science Fiction",
+      "tags": ["Relationships", "Technology"],
+      "publisher": "Galaxy Books",
+      "yearOfPublishing": 2017
+    },
+    {
+      "bookId": 5,
+      "bookName": "Why Do You Hate Money?",
+      "author": "Michael Lee",
+      "image": "https://i.ibb.co/GCSmmqq/kindpng-7318921.png",
+      "review": "In 'Why Do You Hate Money?,' Michael Lee offers a compelling exploration of society's complex relationship with wealth and materialism. Through a blend of incisive analysis and real-world examples, Lee unpacks the psychological, cultural, and societal factors that shape our attitudes towards money. From the allure of consumerism to the psychology of scarcity, this book sheds light on the hidden forces driving our financial decisions. Insightful, thought-provoking, and immensely relevant, 'Why Do You Hate Money?' is essential reading for anyone seeking to understand the true nature of wealth and abundance.",
+      "totalPages": 200,
+      "rating": 4.4,
+      "category": "Finance",
+      "tags": ["Money", "Psychology"],
+      "publisher": "Finance Press",
+      "yearOfPublishing": 2021
+    },
+    {
+      "bookId": 6,
+      "bookName": "Discover",
+      "author": "Sophia Clark",
+      "image": "https://i.ibb.co/9HVgv4w/hand-drawn-space-poster-removebg-preview.png",
+      "review": "Embark on a thrilling journey of discovery with Sophia Clark's mesmerizing novel, 'Discover.' Set against the backdrop of uncharted territories and untold mysteries, this book transports readers to a world brimming with adventure and intrigue. From hidden treasures to ancient ruins, follow the trail of secrets as you uncover the truth behind the enigmatic landscapes. With its captivating narrative and richly imagined world, 'Discover' is a testament to the power of exploration and the human spirit. Prepare to be spellbound from the very first page.",
+      "totalPages": 350,
+      "rating": 4.7,
+      "category": "Adventure",
+      "tags": ["Exploration", "Mystery"],
+      "publisher": "Adventure Publishing",
+      "yearOfPublishing": 2022
+    }
+  ]
+  
