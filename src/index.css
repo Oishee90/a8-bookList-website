@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+.font-playfair{
+  font-family: "Playfair Display", serif;
+}
+.font-work{
+  font-family: "Work Sans", sans-serif;
+}
+#sidebar a.active {
+  color: green;
+border: 2px solid green;
+background: none;
+}
