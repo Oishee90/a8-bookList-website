@@ -27,16 +27,16 @@
     },
     {
       "bookId": 3,
-      "bookName": "The Scholarship Monthly Planner",
-      "author": "Emily Brown",
-      "image": "https://i.ibb.co/JvbgB1H/kindpng-4022054-1-1.png",
-      "review": "Designed to help students navigate the complexities of academic life, 'The Scholarship Monthly Planner' is an indispensable tool for success. With its user-friendly layout and comprehensive approach, this planner empowers students to stay organized, set goals, and track progress throughout the academic year. Packed with valuable tips, resources, and motivational quotes, it's more than just a planner—it's a roadmap to achieving academic excellence. Whether you're a high school student preparing for college or a graduate student juggling multiple commitments, this planner will guide you every step of the way.",
-      "totalPages": 150,
-      "rating": 4.3,
-      "category": "Education",
-      "tags": ["Study", "Planning"],
-      "publisher": "Academic Press",
-      "yearOfPublishing": 2019
+    "bookName": "Supermarket",
+    "author": "Bobby Hall",
+    "image": "https://i.ibb.co/W3dpjb5/daniel-rykhev-r-Jg-COCAOEEM-unsplash-removebg-preview.png",
+    "review": "In 'Supermarket,' Bobby Hall (also known as Logic) takes readers on a wild ride through the eccentric world of Flynn, an aspiring writer who finds himself embroiled in a bizarre series of events after taking a job at the local supermarket. As Flynn navigates love, loss, and the pursuit of his dreams, readers are treated to a rollercoaster of emotions and unexpected twists. With its dark humor and gripping narrative, 'Supermarket' is a genre-defying novel that defies expectations at every turn. A must-read for fans of psychological thrillers and offbeat fiction.",
+    "totalPages": 288,
+    "rating": 4.2,
+    "category": "Fiction",
+    "tags": ["Psychological Thriller", "Dark Comedy"],
+    "publisher": "Simon & Schuster",
+    "yearOfPublishing": 2019
     },
     {
       "bookId": 4,

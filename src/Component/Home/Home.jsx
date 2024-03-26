@@ -12,6 +12,7 @@ const Home = () => {
       .then(data => setBooks(data));
   }, []);
     return (
+     
         <div className="container mx-auto">
           <section className="banner mt-7 container">
           <div className="hero bg-green-100 rounded-3xl ">
@@ -31,24 +32,27 @@ const Home = () => {
           {/* book section */}
           <section className='book mt-10'>
       <div className='mx-auto'>
-        <h1 className='font-work text-2xl font-bold text-black text-center'>Book</h1>
+        <h1 className='font-work text-3xl font-bold text-black text-center'>Books</h1>
       </div>
 
-      <div className='mt-5 grid grid-cols-3  gap-5'>
+      
+      
+      <div className='mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-5'>
         {
-          books.map(book => <div key={book.id} className="  card border-2 border-gray-600 bg-base-100 shadow-xl">
+          books.map(book =>  <Link key={book.bookId} to={`/../${book.bookId}`}> <div className="  card border-2 border-gray-600 bg-base-100 shadow-xl">
+           <Link to={`/${book.id}`}></Link>
           <div className='p-10 '>
       <figure className="px-10 pt-10  rounded-2xl bg-green-100 p-10  ">
-       <img src={book.image} alt="Shoes" className=" h-40 " />
+       <img src={book.image} alt="Shoes" className=" h-40" />
       </figure>
       </div>
-      <div className="card-body flex-grow ">
+      <div className="card-body  ">
        <div className='flex w-[195px]  gap-2 '>
        {book.tags.map((tag, index) => (
               <p key={index} className='text-green-600 font-work font-bold p-2 text-center bg-gray-100 rounded-2xl'>{tag}</p>
             ))}
        </div>
-        <div className='flex flex-col gap-5 flex-1'>
+        <div className='flex flex-col gap-5 '>
           <h1 className='font-playfair text-2xl font-bold text-black'> {book.bookName}</h1>
         <p className='text-[#131313CC] font-medium text-base font-work'>By : <span>{book.author}</span></p></div>
         <div className='border border-dashed h-0 border-gray-400 mt-4 '></div>
@@ -57,9 +61,10 @@ const Home = () => {
       <div className='flex gap-3'><p>{book.rating}</p> <img src={retting} alt="" /></div>
     </div>
       </div>
-    </div>)
-        }
-        {/*1st card  */}
+    </div>  </Link>)
+   
+        } 
+       
       
       </div>
           </section>
