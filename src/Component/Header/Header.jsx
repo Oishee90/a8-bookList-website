@@ -7,6 +7,7 @@ const Header = () => {
   <li className="mr-5 text-lg font-work  font-semibold text-gray-500" id="sidebar"><NavLink to={"/"}>Home</NavLink></li>
   <li className="mr-5 text-lg font-work font-semibold text-gray-500 "id="sidebar"><NavLink to={"/listedBooks"}>Listed Books</NavLink></li>
   <li className="mr-5 text-lg font-work font-semibold text-gray-500 "id="sidebar"><NavLink to={"/pagestoRead"}>Pages to Read </NavLink></li>
+  <li className="mr-5 text-lg font-work font-semibold text-gray-500 "id="sidebar"><NavLink to={"/about"}>About </NavLink></li>
  
 </>
     return (
