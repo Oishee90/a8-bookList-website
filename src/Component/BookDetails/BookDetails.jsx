@@ -1,13 +1,47 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveReadData } from "../../utility/localstorage";
+import { useEffect, useState } from "react";
+import { saveWishlistData } from "../../utility/whislocalstorage";
+
 
 
 const BookDetails = () => {
     const books = useLoaderData();
     const {id} = useParams();
     const idInt = parseInt(id)
+    const [readBooks, setReadBooks] = useState([])
     const book = books.find(book => book.bookId === idInt)
     console.log(book)
+    useEffect(() => {
+        const storedReadBooks = JSON.parse(localStorage.getItem('readBooks'));
+        if (storedReadBooks) {
+          setReadBooks(storedReadBooks);
+        }
+      }, []);
+    const handleReadClick = (id)=>{
+        if (readBooks.includes(id)) {
+            toast('Already read');
+        } else {
+            if(localStorage.getItem('readBooks')) {
+                const storedReadBooks = JSON.parse(localStorage.getItem('readBooks'));
+                if (storedReadBooks.includes(id)) {
+                    toast('Already read');
+                    return;
+                }
+            }
+            saveReadData(id);
+            setReadBooks([...readBooks, id]);
+            toast('Successfully read');
+        }
+    }
+    const handleWishlist = () => {
+        saveWishlistData(id);
+      
+    }
     return (
+       
         <div className="grid grid-cols-1  lg:grid-cols-2 gap-8 mt-6 mb-20 container mx-auto">
   <div className="bg-green-100 rounded-2xl">
 
@@ -43,12 +77,13 @@ const BookDetails = () => {
         </div>
         </div>
         <div className=" flex gap-5">
-        <button className="btn border text-lg text-black font-work font-semibold border-gray-500 px-8">Read</button>
-        <button className="btn rounded-lg text-white font-work font-semibold hover:bg-blue-500 text-lg bg-[#50B1C9]">  Wishlist </button>
+        <button onClick={() => handleReadClick(book.bookId)} className="btn border text-lg text-black font-work font-semibold border-gray-500 px-8">Read</button>
+        <ToastContainer />
+        <button onClick={handleWishlist} className="btn rounded-lg text-white font-work font-semibold hover:bg-blue-500 text-lg bg-[#50B1C9]">  Wishlist </button>
         </div>
          </div>
-           
-        </div>
+         </div>
+       
     );
 };
 
