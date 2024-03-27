@@ -18,6 +18,7 @@ const BookDetails = () => {
         const storedReadBooks = JSON.parse(localStorage.getItem('readBooks'));
         if (storedReadBooks) {
           setReadBooks(storedReadBooks);
+       
         }
       }, []);
     const handleReadClick = (id)=>{
@@ -36,10 +37,18 @@ const BookDetails = () => {
             toast('Successfully read');
         }
     }
-    const handleWishlist = () => {
-        saveWishlistData(id);
-      
+  const handleWishlist  = (id) => {
+    if (readBooks.includes(id)) {
+        toast('Already read');
     }
+    else{
+        saveWishlistData(id)
+        toast('Successfully read');
+
+    }
+
+  }
+    
     return (
        
         <div className="grid grid-cols-1  lg:grid-cols-2 gap-8 mt-6 mb-20 container mx-auto">
@@ -79,7 +88,7 @@ const BookDetails = () => {
         <div className=" flex gap-5">
         <button onClick={() => handleReadClick(book.bookId)} className="btn border text-lg text-black font-work font-semibold border-gray-500 px-8">Read</button>
         <ToastContainer />
-        <button onClick={handleWishlist} className="btn rounded-lg text-white font-work font-semibold hover:bg-blue-500 text-lg bg-[#50B1C9]">  Wishlist </button>
+        <button onClick={() => handleWishlist(book.bookId)} className="btn rounded-lg text-white font-work font-semibold hover:bg-blue-500 text-lg bg-[#50B1C9]">  Wishlist </button>
         </div>
          </div>
          </div>
