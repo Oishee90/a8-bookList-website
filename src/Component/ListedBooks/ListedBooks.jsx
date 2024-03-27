@@ -7,11 +7,13 @@ import { getStoredReadBook } from "../../utility/localstorage";
 import { getStoredWishList } from "../../utility/whislocalstorage";
 
 
+
+
 const ListedBooks = () => {
   const books = useLoaderData()
   const [readBooks, setReadBooks] = useState([]);
   const [wishBooks, setwishBooks] = useState([]);
-  
+
   useEffect(() => {
      const storedata = getStoredReadBook();
      if(books.length > 0 ){
@@ -25,7 +27,7 @@ const ListedBooks = () => {
        setReadBooks(bookRead)
       //  console.log(books,storedata,bookRead)
      }
-  },[])
+  },[books])
   
   useEffect(() => {
     const storewish = getStoredWishList();
@@ -40,7 +42,7 @@ const ListedBooks = () => {
       setwishBooks(bookWish)
       console.log(books,storewish,bookWish)
     }
-  }, []);
+  }, [books]);
     return (
         <div className="container mx-auto">
           <div className="w-full bg-green-100 rounded-3xl h-auto md:p-10 p-7 lg:p-10 text-center mt-7">
@@ -64,8 +66,8 @@ const ListedBooks = () => {
     <div className="grid grid-rows-1 gap-7">
 {
   readBooks.map((readBook,index) => 
-    <div key={index} className="card gap-5 card-side bg-base-100 shadow-xl p-4">
-  <div className="p-4 w-1/4 rounded-2xl bg-green-100 "><img className="w-auto mt-20 mb-10 h-40 mx-auto" src={readBook.image} alt="Movie"/></div>
+    <div key={index} className="card flex-col lg:flex-row md:flex-row items-center lg:items-start  gap-5 bg-base-100 shadow-xl p-4">
+  <div className="p-4 lg:w-1/4 w-full rounded-2xl bg-green-100 "><img className="w-auto mt-20 mb-10 h-40 mx-auto" src={readBook.image} alt="Movie"/></div>
   <div className="card-body mr-6 flex flex-col gap-5 space-y-3 p-4">
     <h2 className="card-title">{readBook.bookName}</h2>
     <p className='text-[#131313B3] font-medium text-xl font-work'>By : <span>{readBook.author}</span></p>
@@ -92,9 +94,12 @@ const ListedBooks = () => {
 
               </div>
   </div>
-</div>)
-}
 </div>
+)
+}
+
+</div>
+
 </div>
   </div>
 {/* whislist */}
@@ -104,8 +109,8 @@ const ListedBooks = () => {
     <div className="grid grid-rows-1 gap-7">
 {
   wishBooks.map((wishBook) => 
-    <div key={wishBook.bookName} className="card gap-5 card-side bg-base-100 shadow-xl p-4">
-  <div className="p-4 w-1/4 rounded-2xl bg-green-100 "><img className="w-auto mt-20 mb-10 h-40 mx-auto" src={wishBook.image} alt="Movie"/></div>
+    <div key={wishBook.bookName} className="card gap-5 flex-col lg:flex-row md:flex-row items-center lg:items-start bg-base-100 shadow-xl p-4">
+  <div className="p-4 lg:w-1/4 w-full rounded-2xl bg-green-100 "><img className="w-auto mt-20 mb-10 h-40 mx-auto" src={wishBook.image} alt="Movie"/></div>
   <div className="card-body mr-6 flex flex-col gap-5 space-y-3 p-4">
     <h2 className="card-title">{wishBook.bookName}</h2>
     <p className='text-[#131313B3] font-medium text-xl font-work'>By : <span>{wishBook.author}</span></p>
@@ -139,8 +144,9 @@ const ListedBooks = () => {
 </div>
 </div>
  </div>
-
+ 
         </div>
+        
     );
 };
 

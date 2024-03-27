@@ -23,27 +23,27 @@ const BookDetails = () => {
       }, []);
     const handleReadClick = (id)=>{
         if (readBooks.includes(id)) {
-            toast('Already read');
+            toast.error('You Have Already Read This Book');
         } else {
             if(localStorage.getItem('readBooks')) {
                 const storedReadBooks = JSON.parse(localStorage.getItem('readBooks'));
                 if (storedReadBooks.includes(id)) {
-                    toast('Already read');
+                    toast.error('You Have Already Read This Book');
                     return;
                 }
             }
             saveReadData(id);
             setReadBooks([...readBooks, id]);
-            toast('Successfully read');
+            toast.success('Booked Added To Read List');
         }
     }
   const handleWishlist  = (id) => {
     if (readBooks.includes(id)) {
-        toast('Already read');
+        toast.error('You Have Already Read This Book');
     }
     else{
         saveWishlistData(id)
-        toast('Successfully read');
+        toast.success('Booked Added To WishList');
 
     }
 
@@ -86,9 +86,9 @@ const BookDetails = () => {
         </div>
         </div>
         <div className=" flex gap-5">
-        <button onClick={() => handleReadClick(book.bookId)} className="btn border text-lg text-black font-work font-semibold border-gray-500 px-8">Read</button>
+        <button onClick={() => handleReadClick(book.bookId)} className="btn border text-lg hover:bg-green-600 text-black font-work font-semibold border-gray-500 px-8">Read</button>
         <ToastContainer />
-        <button onClick={() => handleWishlist(book.bookId)} className="btn rounded-lg text-white font-work font-semibold hover:bg-blue-500 text-lg bg-[#50B1C9]">  Wishlist </button>
+        <button onClick={() => handleWishlist(book.bookId)} className="btn rounded-lg text-black font-work font-semibold hover:bg-blue-500 text-lg bg-[#50B1C9]">  Wishlist </button>
         </div>
          </div>
          </div>

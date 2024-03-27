@@ -1,7 +1,7 @@
 [
     {
       "bookId": 1,
-      "bookName": "The Vintage Book",
+      "bookName": "Vintage",
       "author": "Alice Smith",
       "image": "https://i.ibb.co/QNYHv13/1159-removebg-preview.png",
       "review": "Set in the tumultuous era of World War II, 'The Vintage Book' takes readers on a mesmerizing journey through love, loss, and resilience. With evocative prose and richly drawn characters, Alice Smith paints a vivid portrait of life during wartime. From the bustling streets of London to the serene countryside, this novel captures the essence of human strength in the face of adversity. A poignant tale that will linger in your heart long after you turn the final page.",
@@ -14,7 +14,7 @@
     },
     {
       "bookId": 2,
-      "bookName": "WIN-WIN Strategy",
+      "bookName": "Win Strategy",
       "author": "David Johnson",
       "image": "https://i.ibb.co/qWRdx6W/7492664-removebg-preview.png",
       "review": "In 'WIN-WIN Strategy,' David Johnson presents a masterful guide to achieving success in negotiations. Drawing on years of experience in the business world, Johnson offers practical strategies and insightful tactics for navigating complex deal-making scenarios. Whether you're a seasoned executive or a budding entrepreneur, this book is an indispensable resource for honing your negotiation skills and maximizing outcomes. Engaging, informative, and empowering, 'WIN-WIN Strategy' is a must-read for anyone seeking to excel in the art of negotiation.",
@@ -27,7 +27,7 @@
     },
     {
       "bookId": 3,
-    "bookName": "Supermarket",
+    "bookName": "Market",
     "author": "Bobby Hall",
     "image": "https://i.ibb.co/W3dpjb5/daniel-rykhev-r-Jg-COCAOEEM-unsplash-removebg-preview.png",
     "review": "In 'Supermarket,' Bobby Hall (also known as Logic) takes readers on a wild ride through the eccentric world of Flynn, an aspiring writer who finds himself embroiled in a bizarre series of events after taking a job at the local supermarket. As Flynn navigates love, loss, and the pursuit of his dreams, readers are treated to a rollercoaster of emotions and unexpected twists. With its dark humor and gripping narrative, 'Supermarket' is a genre-defying novel that defies expectations at every turn. A must-read for fans of psychological thrillers and offbeat fiction.",
@@ -40,7 +40,7 @@
     },
     {
       "bookId": 4,
-      "bookName": "The Space Between Us",
+      "bookName": "Space Between",
       "author": "Sarah Johnson",
       "image": "https://i.ibb.co/9qBSx9Z/the-space-between-us-removebg-preview.png",
       "review": "In 'The Space Between Us,' Sarah Johnson delves deep into the complexities of human connection in an increasingly digital world. Through the intertwining stories of diverse characters, she explores themes of loneliness, isolation, and the search for meaningful connections. With lyrical prose and poignant insights, Johnson crafts a narrative that resonates on a profound emotional level. A timely and thought-provoking novel that prompts readers to reflect on the true nature of relationships in the modern age.",
@@ -53,7 +53,7 @@
     },
     {
       "bookId": 5,
-      "bookName": "Why Do You Hate Money?",
+      "bookName": "Hate Money",
       "author": "Michael Lee",
       "image": "https://i.ibb.co/GCSmmqq/kindpng-7318921.png",
       "review": "In 'Why Do You Hate Money?,' Michael Lee offers a compelling exploration of society's complex relationship with wealth and materialism. Through a blend of incisive analysis and real-world examples, Lee unpacks the psychological, cultural, and societal factors that shape our attitudes towards money. From the allure of consumerism to the psychology of scarcity, this book sheds light on the hidden forces driving our financial decisions. Insightful, thought-provoking, and immensely relevant, 'Why Do You Hate Money?' is essential reading for anyone seeking to understand the true nature of wealth and abundance.",
