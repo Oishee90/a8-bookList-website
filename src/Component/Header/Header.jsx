@@ -4,11 +4,11 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const links = <>
-  <li className="mr-5 text-lg font-work  font-semibold text-gray-500" id="sidebar"><NavLink to={"/"}>Home</NavLink></li>
-  <li className="mr-5 text-lg font-work font-semibold text-gray-500 "id="sidebar"><NavLink to={"/listedBooks"}>Listed Books</NavLink></li>
-  <li className="mr-5 text-lg font-work font-semibold text-gray-500 "id="sidebar"><NavLink to={"/pagestoRead"}>Pages to Read </NavLink></li>
-  <li className="mr-5 text-lg font-work font-semibold text-gray-500 "id="sidebar"><NavLink to={"/about"}>About </NavLink></li>
- 
+  <li className="mr-5 text-base lg:text-lg font-work  font-semibold text-gray-500" id="sidebar"><NavLink to={"/"}>Home</NavLink></li>
+  <li className="mr-5 text-base lg:text-lg font-work font-semibold text-gray-500 "id="sidebar"><NavLink to={"/listedBooks"}>Listed Books</NavLink></li>
+  <li className="mr-5 text-base lg:text-lg font-work font-semibold text-gray-500 "id="sidebar"><NavLink to={"/pagestoRead"}>Pages to Read </NavLink></li>
+  <li className="mr-5 text-base lg:text-lg font-work font-semibold text-gray-500 "id="sidebar"><NavLink to={"/about"}>About </NavLink></li>
+  <li className="mr-5 text-base lg:text-lg font-work font-semibold text-gray-500 "id="sidebar"><NavLink to={"/contact"}>Contact </NavLink></li>
 </>
     return (
         <div className="navbar bg-base-100 container mx-auto mt-3">
@@ -28,9 +28,9 @@ const Header = () => {
       {links}
     </ul>
   </div>
-  <div className="navbar-end flex gap-3 items-center mr-5">
-  <button className="btn rounded-lg text-white font-work font-semibold hover:bg-green-900 text-lg bg-green-600">Sign In</button>
-  <button className="btn rounded-lg text-white font-work font-semibold hover:bg-blue-500 text-lg bg-[#59C6D2]"> Sign Up </button>
+  <div className="navbar-end lg:flex lg:flex-row md:flex-row flex-col gap-3 hidden md:flex ">
+  <button className="btn p-2 rounded-lg text-white font-work font-semibold hover:bg-green-900 text-base lg:text-lg bg-green-600">Sign In</button>
+  <button className="btn p-2 rounded-lg text-white font-work font-semibold hover:bg-blue-500 text-base lg:text-lg bg-[#59C6D2]"> Sign Up </button>
   </div>
 </div>
     );

@@ -1,7 +1,7 @@
 import { CiLocationOn } from "react-icons/ci";
 import { BsPeople } from "react-icons/bs";
 import { MdOutlineFindInPage } from "react-icons/md";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getStoredReadBook } from "../../utility/localstorage";
 import { getStoredWishList } from "../../utility/whislocalstorage";
@@ -44,8 +44,8 @@ const ListedBooks = () => {
     }
   }, [books]);
     return (
-        <div className="container mx-auto">
-          <div className="w-full bg-green-100 rounded-3xl h-auto md:p-10 p-7 lg:p-10 text-center mt-7">
+        <div className="container mx-auto w-full">
+          <div className="w-auto bg-green-100 rounded-3xl h-auto md:p-10 p-7 lg:p-10 text-center mt-7">
             <h1 className="font-work text-black text-3xl font-bold">Books </h1></div>
             {/* select */}
             <div className="mt-6 text-center">
@@ -69,9 +69,9 @@ const ListedBooks = () => {
     <div key={index} className="card flex-col lg:flex-row md:flex-row items-center lg:items-start  gap-5 bg-base-100 shadow-xl p-4">
   <div className="p-4 lg:w-1/4 w-full rounded-2xl bg-green-100 "><img className="w-auto mt-20 mb-10 h-40 mx-auto" src={readBook.image} alt="Movie"/></div>
   <div className="card-body mr-6 flex flex-col gap-5 space-y-3 p-4">
-    <h2 className="card-title">{readBook.bookName}</h2>
+    <h2 className="card-title font-extrabold">{readBook.bookName}</h2>
     <p className='text-[#131313B3] font-medium text-xl font-work'>By : <span>{readBook.author}</span></p>
-    <div className='flex full gap-5 items-center mt-7'>
+    <div className='flex lg:flex-row md:flex-row flex-col gap-5 items-center mt-7'>
                 <span  className="text-black font-bold">Tag</span>
        {readBook.tags.map((tag, index) => (
               <p key={index} className='text-green-600 font-work font-bold p-4 text-center bg-gray-100 rounded-2xl'>#{tag}</p>
@@ -80,18 +80,18 @@ const ListedBooks = () => {
               <p className="font-work font-semibold text-lg text-[#131313B3]">Year of Publishing: <span>{readBook.yearOfPublishing}</span></p></div>
       
         </div>
-        <div className="flex gap-10 items-center">
+        <div className="flex  gap-10 items-center">
               <div className="flex gap-2 items-center"><BsPeople className="h-6 w-6 font-bold" /> 
               <p className="font-work font-semibold text-lg text-[#131313B3]"> Publisher:  <span>{readBook.publisher}</span></p></div>
               <div className="flex gap-2 items-center"><MdOutlineFindInPage className="h-6 w-6 font-bold" /> 
               <p className="font-work font-semibold text-lg text-[#131313B3]"> Page:  <span>{readBook.totalPages}</span></p></div>
               </div>
 
-              <div className="flex items-center gap-5">
+              <div className="flex lg:flex-row md:flex-col flex-col items-center gap-5">
               <button className="btn rounded-full text-[#328EFF] font-work font-semibold hover:bg-blue-500 text-lg bg-[#328EFF26]">Category: {readBook.category}</button>
               <button className="btn rounded-full text-[#f6e5cc] font-work font-semibold hover:bg-yellow-500 text-lg bg-[#FFAC33]"> Rating: {readBook.rating} </button>
-              <button className="btn rounded-full text-white font-work font-semibold hover:bg-green-900 text-lg bg-[#23BE0A]">View Details</button>
-
+              <Link to={`/${readBook.bookId}`}><button className="btn rounded-full text-white font-work font-semibold hover:bg-green-900 text-base lg:text-lg bg-[#23BE0A]">View Details</button>
+</Link>
               </div>
   </div>
 </div>
@@ -111,10 +111,10 @@ const ListedBooks = () => {
   wishBooks.map((wishBook) => 
     <div key={wishBook.bookName} className="card gap-5 flex-col lg:flex-row md:flex-row items-center lg:items-start bg-base-100 shadow-xl p-4">
   <div className="p-4 lg:w-1/4 w-full rounded-2xl bg-green-100 "><img className="w-auto mt-20 mb-10 h-40 mx-auto" src={wishBook.image} alt="Movie"/></div>
-  <div className="card-body mr-6 flex flex-col gap-5 space-y-3 p-4">
-    <h2 className="card-title">{wishBook.bookName}</h2>
+  <div className="card-body   mr-6 flex flex-col gap-5 space-y-3 p-4">
+    <h2 className="card-title font-extrabold">{wishBook.bookName}</h2>
     <p className='text-[#131313B3] font-medium text-xl font-work'>By : <span>{wishBook.author}</span></p>
-    <div className='flex full gap-5 items-center mt-7'>
+    <div className='flex lg:flex-row md:flex-row flex-col gap-5 items-center mt-7'>
                 <span  className="text-black font-bold">Tag</span>
        {wishBook.tags.map((tag, index) => (
               <p key={index} className='text-green-600 font-work font-bold p-4 text-center bg-gray-100 rounded-2xl'>#{tag}</p>
@@ -130,10 +130,10 @@ const ListedBooks = () => {
               <p className="font-work font-semibold text-lg text-[#131313B3]"> Page:  <span>{wishBook.totalPages}</span></p></div>
               </div>
 
-              <div className="flex items-center gap-5">
+              <div className="flex lg:flex-row md:flex-col flex-col items-center gap-5">
               <button className="btn rounded-full text-[#328EFF] font-work font-semibold hover:bg-blue-500 text-lg bg-[#328EFF26]">Category: {wishBook.category}</button>
               <button className="btn rounded-full text-[#f6e5cc] font-work font-semibold hover:bg-yellow-500 text-lg bg-[#FFAC33]"> Rating: {wishBook.rating} </button>
-              <button className="btn rounded-full text-white font-work font-semibold hover:bg-green-900 text-lg bg-[#23BE0A]">View Details</button>
+              <Link to={`/${wishBook.bookId}`}><button className="btn rounded-full text-white font-work font-semibold hover:bg-green-900 text-lg bg-[#23BE0A]">View Details</button></Link>
 
               </div>
   </div>
