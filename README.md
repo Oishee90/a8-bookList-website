@@ -1,6 +1,6 @@
 # Book Face Website
 
-Welcome to BookShop, an interactive website where you can explore book descriptions, manage your wishlist and readlist, read reviews, and visualize book popularity through graphs.
+Welcome to Book Face, an interactive website where you can explore book descriptions, manage your wishlist and readlist, read reviews, and visualize book popularity through graphs.
 
 ## Features:
 
