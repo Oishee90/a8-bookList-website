@@ -1,7 +1,7 @@
 import { getStoredReadBook } from "../../utility/localstorage";
 import { useLoaderData } from "react-router-dom"
 import { useEffect, useState } from "react";
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from 'recharts';
 
 import PropTypes from 'prop-types';
 
@@ -19,6 +19,17 @@ const TriangleBar = (props) => {
   const { fill, x, y, width, height } = props;
 
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
+};
+const CustomTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="custom-tooltip">
+        <p className="label font-bold font-work">{` ${payload[0].payload.bookName}`}</p>
+      </div>
+    );
+  }
+
+  return null;
 };
 
 const PagesToRead = () => {
@@ -66,7 +77,10 @@ console.log(readBooks)
           
               /> {/* Assuming bookName is the property representing book names */}
               <YAxis />
-              <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+           
+              <Tooltip content={<CustomTooltip />} />
+              <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}
+              >
                 {readBooks.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={colors[index % 20]} />
                 ))}
@@ -80,6 +94,11 @@ console.log(readBooks)
         </div>
        
     );
+};
+CustomTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
+  label: PropTypes.string,
 };
 TriangleBar.propTypes = {
     fill: PropTypes.string.isRequired,

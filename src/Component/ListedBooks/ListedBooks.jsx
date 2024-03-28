@@ -14,6 +14,43 @@ const ListedBooks = () => {
   const [readBooks, setReadBooks] = useState([]);
   const [wishBooks, setwishBooks] = useState([]);
 
+
+  // data sort
+  const [booksData, setbooksData] = useState([]);
+  const [sortType,setSortType] = useState('rating'); 
+ 
+  useEffect(() => {
+      const storeBooks = getStoredReadBook();
+      if(books.length > 0 ){
+        const bookRead = [];
+        for (const id of storeBooks){
+         const book = books.find(book => book.bookId ===  parseInt(id))
+         if(book){
+           bookRead.push(book)
+         }
+        }
+        setbooksData(bookRead)
+       //  console.log(books,storedata,bookRead)
+      }
+   },[])
+  
+   const handleSortChange = (e) => {
+    setSortType(e.target.value);
+  };
+
+
+let sortedBooks = [...booksData].sort((a, b) => {
+  if (sortType === 'rating') {
+    return b.rating - a.rating;
+  } else if (sortType === 'publishedYear') {
+    return b.publishedYear - a.publishedYear;
+  } else if (sortType === 'pageNumber') {
+    return b.pageNumber - a.pageNumber;
+  }
+});
+console.log(sortedBooks)
+  // data sort end
+
   useEffect(() => {
      const storedata = getStoredReadBook();
      if(books.length > 0 ){
@@ -44,18 +81,19 @@ const ListedBooks = () => {
     }
   }, [books]);
     return (
+      
         <div className="container mx-auto w-full">
           <div className="w-auto bg-green-50 rounded-3xl h-auto md:p-10 p-7 lg:p-10 text-center mt-7">
             <h1 className="font-work text-black text-3xl font-bold">Books </h1></div>
             {/* select */}
             <div className="mt-6 text-center">
-   <select className="m-3 text-center py-5 rounded-xl border-none px-6
+   <select onChange={handleSortChange} className="m-3 text-center py-5 rounded-xl border-none px-6
     hover:bg-green-900 bg-green-600 text-white font-work text-xl font-bold">
 
   <option disabled selected className=" rounded-xl" >Sort By</option>
-  <option className="bg-gray-200 text-black font-work text-xl font-bold">Rating</option>
-  <option  className="bg-gray-200 text-black font-work text-xl font-bold"> Number of pages</option>
-  <option  className="bg-gray-200 text-black font-work text-xl font-bold">  Publisher year</option>
+  <option value="rating" className="bg-gray-200 text-black font-work text-xl font-bold">Rating</option>
+  <option value="pageNumber" className="bg-gray-200 text-black font-work text-xl font-bold"> Number of pages</option>
+  <option value="publishedYear"className="bg-gray-200 text-black font-work text-xl font-bold">  Publisher year</option>
 </select></div>
 {/* tab */}
  <div className="mt-6">
