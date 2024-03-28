@@ -52,9 +52,9 @@ const BookDetails = () => {
     return (
        
         <div className="grid grid-cols-1  lg:grid-cols-2 gap-8 mt-6 mb-20 container mx-auto">
-  <div className="bg-green-100 rounded-2xl">
+  <div className="bg-green-50 rounded-2xl">
 
-      <img className=" items-center mt-10 mx-auto min-h-screen" src={book.image} alt="" />
+      <img className=" items-center mt-10 mx-auto lg:min-h-screen" src={book.image} alt="" />
  
     </div>
          <div className="flex flex-col gap-5 space-y-3 p-4"> 

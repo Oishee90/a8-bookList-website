@@ -21,14 +21,16 @@ const Header = () => {
        {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-[#131313]  text-2xl font-work font-bold">Book Vibe</a>
+    <a className="btn btn-ghost text-[#131313] text-xl lg:text-2xl font-work font-extrabold">
+  Book<span className="text-green-800">Face</span>
+</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       {links}
     </ul>
   </div>
-  <div className="navbar-end lg:flex lg:flex-row md:flex-row flex-col gap-3 hidden md:flex ">
+  <div className="navbar-end flex lg:flex-row md:flex-row flex-row gap-3  ">
   <button className="btn p-2 rounded-lg text-white font-work font-semibold hover:bg-green-900 text-base lg:text-lg bg-green-600">Sign In</button>
   <button className="btn p-2 rounded-lg text-white font-work font-semibold hover:bg-blue-500 text-base lg:text-lg bg-[#59C6D2]"> Sign Up </button>
   </div>

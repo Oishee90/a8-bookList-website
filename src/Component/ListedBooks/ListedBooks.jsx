@@ -45,7 +45,7 @@ const ListedBooks = () => {
   }, [books]);
     return (
         <div className="container mx-auto w-full">
-          <div className="w-auto bg-green-100 rounded-3xl h-auto md:p-10 p-7 lg:p-10 text-center mt-7">
+          <div className="w-auto bg-green-50 rounded-3xl h-auto md:p-10 p-7 lg:p-10 text-center mt-7">
             <h1 className="font-work text-black text-3xl font-bold">Books </h1></div>
             {/* select */}
             <div className="mt-6 text-center">
@@ -67,7 +67,7 @@ const ListedBooks = () => {
 {
   readBooks.map((readBook,index) => 
     <div key={index} className="card flex-col lg:flex-row md:flex-row items-center lg:items-start  gap-5 bg-base-100 shadow-xl p-4">
-  <div className="p-4 lg:w-1/4 w-full rounded-2xl bg-green-100 "><img className="w-auto mt-20 mb-10 h-40 mx-auto" src={readBook.image} alt="Movie"/></div>
+  <div className="p-4 lg:w-1/4 w-full rounded-2xl bg-green-50 "><img className="w-auto mt-20 mb-10 h-40 mx-auto" src={readBook.image} alt="Movie"/></div>
   <div className="card-body mr-6 flex flex-col gap-5 space-y-3 p-4">
     <h2 className="card-title font-extrabold">{readBook.bookName}</h2>
     <p className='text-[#131313B3] font-medium text-xl font-work'>By : <span>{readBook.author}</span></p>
@@ -110,7 +110,7 @@ const ListedBooks = () => {
 {
   wishBooks.map((wishBook) => 
     <div key={wishBook.bookName} className="card gap-5 flex-col lg:flex-row md:flex-row items-center lg:items-start bg-base-100 shadow-xl p-4">
-  <div className="p-4 lg:w-1/4 w-full rounded-2xl bg-green-100 "><img className="w-auto mt-20 mb-10 h-40 mx-auto" src={wishBook.image} alt="Movie"/></div>
+  <div className="p-4 lg:w-1/4 w-full rounded-2xl bg-green-50 "><img className="w-auto mt-20 mb-10 h-40 mx-auto" src={wishBook.image} alt="Movie"/></div>
   <div className="card-body   mr-6 flex flex-col gap-5 space-y-3 p-4">
     <h2 className="card-title font-extrabold">{wishBook.bookName}</h2>
     <p className='text-[#131313B3] font-medium text-xl font-work'>By : <span>{wishBook.author}</span></p>

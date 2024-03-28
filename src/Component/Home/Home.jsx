@@ -15,7 +15,7 @@ const Home = () => {
      
         <div className="container mx-auto">
           <section className="banner mt-7 container">
-          <div className="hero bg-green-100 rounded-3xl ">
+          <div className="hero bg-green-50 rounded-3xl ">
   <div className="hero-content flex-col lg:flex-row-reverse w-full rounded-3xl justify-center items-center gap-3">
   <img src={image} className="w-auto" alt="Description of the image" />
 
@@ -39,10 +39,10 @@ const Home = () => {
       
       <div className='mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-5'>
         {
-          books.map(book =>  <Link key={book.bookId} to={`/../${book.bookId}`}> <div className="  card border-2 border-gray-600 bg-base-100 shadow-xl">
+          books.map(book =>  <Link key={book.bookId} to={`/../${book.bookId}`}> <div className="  card border-2 border-gray-200 bg-base-100 shadow-xl">
            <Link to={`/${book.id}`}></Link>
           <div className='p-10 '>
-      <figure className="px-10 pt-10  rounded-2xl bg-green-100 p-10  ">
+      <figure className="px-10 pt-10  rounded-2xl bg-green-50 p-10  ">
        <img src={book.image} alt="Shoes" className=" h-40" />
       </figure>
       </div>
