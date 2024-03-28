@@ -126,7 +126,7 @@ console.log(sortedBooks)
               </div>
 
               <div className="flex lg:flex-row md:flex-col flex-col items-center gap-5">
-              <button className="btn rounded-full text-[#328EFF] font-work font-semibold hover:bg-blue-500 text-lg bg-[#328EFF26]">Category: {readBook.category}</button>
+              <button className="btn rounded-full text-[#328EFF] font-work font-semibold hover:text-white hover:bg-blue-500 text-lg bg-[#328EFF26]">Category: {readBook.category}</button>
               <button className="btn rounded-full text-[#f6e5cc] font-work font-semibold hover:bg-yellow-500 text-lg bg-[#FFAC33]"> Rating: {readBook.rating} </button>
               <Link to={`/${readBook.bookId}`}><button className="btn rounded-full text-white font-work font-semibold hover:bg-green-900 text-base lg:text-lg bg-[#23BE0A]">View Details</button>
 </Link>
@@ -169,7 +169,7 @@ console.log(sortedBooks)
               </div>
 
               <div className="flex lg:flex-row md:flex-col flex-col items-center gap-5">
-              <button className="btn rounded-full text-[#328EFF] font-work font-semibold hover:bg-blue-500 text-lg bg-[#328EFF26]">Category: {wishBook.category}</button>
+              <button className="btn rounded-full text-[#328EFF] font-work font-semibold hover:text-white hover:bg-blue-500 text-lg bg-[#328EFF26]">Category: {wishBook.category}</button>
               <button className="btn rounded-full text-[#f6e5cc] font-work font-semibold hover:bg-yellow-500 text-lg bg-[#FFAC33]"> Rating: {wishBook.rating} </button>
               <Link to={`/${wishBook.bookId}`}><button className="btn rounded-full text-white font-work font-semibold hover:bg-green-900 text-lg bg-[#23BE0A]">View Details</button></Link>
 
